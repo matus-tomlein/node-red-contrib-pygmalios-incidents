@@ -1,0 +1,151 @@
+<script type="text/javascript">
+  RED.nodes.registerType('green-incident', {
+    category: 'incidents',
+    color: '#87A980',
+    defaults: {
+      modules: { value: "" },
+      title: { value: "" },
+    },
+    inputs: 1,
+    outputs: 1,
+    icon: "alert.png",
+    label: function () {
+      return this.title || "green incident";
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="green-incident">
+  <div class="form-row">
+      <label for="node-input-title"><i class="icon-tag"></i> Title</label>
+      <input type="text" id="node-input-title" placeholder="Title">
+  </div>
+  <div class="form-row">
+      <label for="node-input-modules"><i class="icon-tag"></i> Modules</label>
+      <select id="node-input-modules">
+        <option value="demography">Demography</option>
+        <option value="instore_behavior">In-Store behaviour</option>
+        <option value="queue_monitoring">Queue Monitoring</option>
+        <option value="store_productivity">Store Productivity</option>
+        <option value="traffic_essentials">Traffic Essentials</option>
+      </select>
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="green-incident">
+  <p>Green incident report.</p>
+</script>
+
+<script type="text/javascript">
+  RED.nodes.registerType('yellow-incident', {
+    category: 'incidents',
+    color: '#E2D96E',
+    defaults: {
+      modules: { value: "" },
+      title: { value: "" },
+    },
+    inputs: 1,
+    outputs: 1,
+    icon: "alert.png",
+    label: function () {
+      return this.title || "yellow incident";
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="yellow-incident">
+  <div class="form-row">
+      <label for="node-input-title"><i class="icon-tag"></i> Title</label>
+      <input type="text" id="node-input-title" placeholder="Title">
+  </div>
+  <div class="form-row">
+      <label for="node-input-modules"><i class="icon-tag"></i> Modules</label>
+      <select id="node-input-modules">
+        <option value="demography">Demography</option>
+        <option value="instore_behavior">In-Store behaviour</option>
+        <option value="queue_monitoring">Queue Monitoring</option>
+        <option value="store_productivity">Store Productivity</option>
+        <option value="traffic_essentials">Traffic Essentials</option>
+      </select>
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="yellow-incident">
+  <p>Green incident report.</p>
+</script>
+
+<script type="text/javascript">
+  RED.nodes.registerType('red-incident', {
+    category: 'incidents',
+    color: '#E9967A',
+    defaults: {
+      modules: { value: "" },
+      title: { value: "" },
+    },
+    inputs: 1,
+    outputs: 1,
+    icon: "alert.png",
+    label: function () {
+      return this.title || "red incident";
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="red-incident">
+  <div class="form-row">
+      <label for="node-input-title"><i class="icon-tag"></i> Title</label>
+      <input type="text" id="node-input-title" placeholder="Title">
+  </div>
+  <div class="form-row">
+      <label for="node-input-modules"><i class="icon-tag"></i> Modules</label>
+      <select id="node-input-modules">
+        <option value="demography">Demography</option>
+        <option value="instore_behavior">In-Store behaviour</option>
+        <option value="queue_monitoring">Queue Monitoring</option>
+        <option value="store_productivity">Store Productivity</option>
+        <option value="traffic_essentials">Traffic Essentials</option>
+      </select>
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="red-incident">
+  <p>Red incident report.</p>
+</script>
+
+<script type="text/javascript">
+  RED.nodes.registerType('black-incident', {
+    category: 'incidents',
+    color: '#000000',
+    defaults: {
+      modules: { value: "" },
+      title: { value: "" },
+    },
+    inputs: 1,
+    outputs: 1,
+    icon: "alert.png",
+    label: function () {
+      return this.title || "black incident";
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="black-incident">
+  <div class="form-row">
+      <label for="node-input-title"><i class="icon-tag"></i> Title</label>
+      <input type="text" id="node-input-title" placeholder="Title">
+  </div>
+  <div class="form-row">
+      <label for="node-input-modules"><i class="icon-tag"></i> Modules</label>
+      <select id="node-input-modules">
+        <option value="demography">Demography</option>
+        <option value="instore_behavior">In-Store behaviour</option>
+        <option value="queue_monitoring">Queue Monitoring</option>
+        <option value="store_productivity">Store Productivity</option>
+        <option value="traffic_essentials">Traffic Essentials</option>
+      </select>
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="black-incident">
+  <p>Black incident report.</p>
+</script>
