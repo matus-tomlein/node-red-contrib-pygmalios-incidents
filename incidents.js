@@ -19,12 +19,18 @@ function createIncident(RED, alertType) {
         description = msg.payload.description;
       }
 
+      let documentationUrl = '';
+      if (config.documentation_url) {
+        documentationUrl = config.documentation_url;
+      }
+
       msg.payload = {
         title: title,
         description: description,
         alert_type: alertType,
         operation_id: String(msg.operation._id),
         operation_name: msg.operation.name,
+        documentation_url: documentationUrl,
         modules: config.modules,
         date: msg.date.getTime(),
         test_batch: msg.testBatch
