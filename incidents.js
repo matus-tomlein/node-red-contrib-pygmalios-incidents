@@ -20,7 +20,9 @@ function createIncident(RED, alertType) {
       }
 
       let documentationUrl = '';
-      if (config.documentation_url) {
+      if (msg.payload && msg.payload.documentation_url) {
+        documentationUrl = msg.payload.documentation_url;
+      } else if (config.documentation_url) {
         documentationUrl = config.documentation_url;
       }
 
