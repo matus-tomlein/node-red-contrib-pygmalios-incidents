@@ -169,3 +169,46 @@
 <script type="text/x-red" data-help-name="black-incident">
   <p>Black incident report.</p>
 </script>
+
+<script type="text/javascript">
+  RED.nodes.registerType('no-incident', {
+    category: 'incidents',
+    color: '#FFFFFF',
+    defaults: {
+      modules: { value: "" },
+      title: { value: "" },
+      documentation_url: { value: "" },
+    },
+    inputs: 1,
+    outputs: 1,
+    icon: "alert.png",
+    label: function () {
+      return this.title || "no incident";
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="no-incident">
+  <div class="form-row">
+      <label for="node-input-title"><i class="icon-tag"></i> Title</label>
+      <input type="text" id="node-input-title" placeholder="Title">
+  </div>
+  <div class="form-row">
+      <label for="node-input-modules"><i class="icon-tag"></i> Modules</label>
+      <select id="node-input-modules">
+        <option value="demography">Demography</option>
+        <option value="instore_behavior">In-Store behaviour</option>
+        <option value="queue_monitoring">Queue Monitoring</option>
+        <option value="store_productivity">Store Productivity</option>
+        <option value="traffic_essentials">Traffic Essentials</option>
+      </select>
+  </div>
+  <div class="form-row">
+      <label for="node-input-title"><i class="icon-tag"></i> Documentation URL</label>
+      <input type="text" id="node-input-documentation_url" placeholder="Documentation URL">
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="no-incident">
+  <p>No incident report.</p>
+</script>

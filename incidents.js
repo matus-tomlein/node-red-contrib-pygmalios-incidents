@@ -62,4 +62,5 @@ module.exports = function (RED) {
   RED.nodes.registerType('yellow-incident', createIncident(RED, 'yellow'));
   RED.nodes.registerType('red-incident', createIncident(RED, 'red'));
   RED.nodes.registerType('black-incident', createIncident(RED, 'black'));
+  RED.nodes.registerType('no-incident', createIncident(RED, 'no'));
 };
